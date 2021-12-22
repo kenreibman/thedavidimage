@@ -1,0 +1,224 @@
+@import url("https://use.typekit.net/vyr4ohf.css");
+
+:root {
+  --ff-main: futura-pt, sans-serif;
+  --ff-secondary: Arial, Helvetica, sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GLOBAL */
+
+/* Set core body defaults */
+html {
+  font-family: var(--ff-main);
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+.horizontal-positioning-center {
+  margin: 0 auto;
+}
+
+/* START */
+.showcase {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: url(../images/28restaurant.jpg) no-repeat center center/cover;
+  z-index: 1;
+}
+
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.315);
+}
+
+.showcase__top {
+  position: relative;
+  height: 150px;
+  z-index: 2;
+}
+
+.showcase__top img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  /* filter: contrast(500%);
+  filter: saturate(500%); */
+}
+
+.showcase__content {
+  width: 100%;
+  text-align: center;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+}
+
+.showcase__content h1 {
+  width: 100%;
+
+  font-weight: 500;
+  font-style: normal;
+  font-size: 4rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .showcase__content h1 {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .showcase__content h1 {
+    font-size: 7rem;
+  }
+}
+
+.showcase__navbar {
+  width: 100%;
+
+  margin-top: 2rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  font-size: 1.2rem;
+
+  padding: 1rem;
+
+  color: rgb(209, 209, 209);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  li {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+}
+
+a:link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+a:visited {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 60%;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.social {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fab {
+  margin: 0.5rem;
+}
+
+.fab:hover {
+  opacity: 60%;
+}
